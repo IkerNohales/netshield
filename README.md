@@ -39,9 +39,22 @@ Redundancia ante ciertos fallos de disco y recuperación de información; RAID n
 
 ## Arquitectura
 
+La red se divide en cuatro VLANs:
+
+| VLAN | Uso | Red |
+|---|---|---|
+| 10 | Servidores | 192.168.10.0/24 |
+| 20 | Usuarios y clientes | 192.168.20.0/24 |
+| 30 | Gestión | 192.168.30.0/24 |
+| 40 | Invitados | 192.168.40.0/24 |
+
+Los diagramas de red y de servicios están en la carpeta `docs/`.
+
 ## Estructura del repositorio
 
-## Cómo desplegarlo
+## Estado del proyecto
+
+En desarrollo. Actualmente en fase de preparación del entorno
 
 ## Autores
 Iker Nohales | Daniel Avilés
