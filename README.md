@@ -52,6 +52,18 @@ Los diagramas de red y de servicios están en la carpeta `docs/`.
 
 ## Estructura del repositorio
 
+```
+docs/             Documentación, diagramas y planificación
+network/          pfSense: DHCP, DNS, VLANs y firewall
+vpn/              WireGuard
+ids/              Suricata
+windows-server/   Dominio y permisos
+nextcloud/        Almacenamiento y copias de seguridad
+monitoring/       Prometheus, Loki y Grafana
+web/              Panel web en Flask
+scripts/          Scripts de despliegue y pruebas
+```
+
 ## Estado del proyecto
 
 En desarrollo. Actualmente en fase de preparación del entorno
