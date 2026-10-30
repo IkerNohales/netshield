@@ -1,1 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetShield · Infraestructura de redes segura para PYMES</title>
+  <style>
+    :root {
+      --bg: #f4f7fa;
+      --card: #ffffff;
+      --text: #1b2a3a;
+      --muted: #5b6b7b;
+      --accent: #1f5f8b;
+      --dark: #10243a;
+      --border: #dbe3ea;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0e1a26;
+        --card: #162636;
+        --text: #e6edf3;
+        --muted: #9fb0c0;
+        --accent: #5aa9e0;
+        --dark: #0a131c;
+        --border: #263a4d;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--dark);
+      color: #ffffff;
+      padding: 56px 20px;
+      text-align: center;
+    }
+    header h1 { margin: 0 0 8px; font-size: 2.4rem; letter-spacing: 1px; }
+    header p { margin: 0; color: #c5d3e0; font-size: 1.1rem; }
+    .btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 10px 22px;
+      background: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    main { max-width: 960px; margin: 0 auto; padding: 32px 20px 56px; }
+    section { margin-bottom: 40px; }
+    h2 { color: var(--accent); border-bottom: 2px solid var(--border); padding-bottom: 6px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 18px;
+    }
+    .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; background: var(--card); }
+    th, td { text-align: left; padding: 10px 12px; border: 1px solid var(--border); }
+    th { background: var(--dark); color: #ffffff; }
+    footer {
+      text-align: center;
+      padding: 24px 20px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
 
+<header>
+  <h1>NETSHIELD</h1>
+  <p>Infraestructura de redes segura para PYMES</p>
+  <a class="btn" href="https://github.com/IkerNohales/netshield">Ver repositorio en GitHub</a>
+</header>
+
+<main>
+
+  <section>
+    <h2>¿Qué es NetShield?</h2>
+    <p>
+      NetShield es una infraestructura de red empresarial pensada para pequeñas y medianas
+      empresas que necesitan trabajar de forma segura, remota y sencilla. Reúne en un mismo
+      sistema la gestión de red y usuarios, la detección y el bloqueo de amenazas, el
+      almacenamiento centralizado con copias de seguridad, el acceso remoto por VPN y la
+      monitorización del estado de la red.
+    </p>
+  </section>
+
+  <section>
+    <h2>Qué ofrece</h2>
+    <div class="grid">
+      <div class="card"><h3>Red segmentada</h3><p>VLANs, DHCP, DNS y firewall gestionados con pfSense.</p></div>
+      <div class="card"><h3>Acceso remoto seguro</h3><p>VPN con WireGuard para usuarios autorizados.</p></div>
+      <div class="card"><h3>Detección de amenazas</h3><p>Suricata analiza el tráfico, genera alertas y bloquea intrusiones.</p></div>
+      <div class="card"><h3>Usuarios y permisos</h3><p>Dominio, cuentas y grupos centralizados en Windows Server.</p></div>
+      <div class="card"><h3>Archivos y copias</h3><p>Nextcloud con copias de seguridad y discos en RAID.</p></div>
+      <div class="card"><h3>Monitorización</h3><p>Prometheus, Loki y Grafana, con un panel web propio en Flask.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Tecnologías</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Tecnología</th><th>Función</th></tr>
+        <tr><td>pfSense</td><td>Firewall, DHCP, DNS, VLANs y conectividad</td></tr>
+        <tr><td>WireGuard</td><td>VPN para acceso remoto seguro</td></tr>
+        <tr><td>Suricata</td><td>Detección y prevención de intrusiones</td></tr>
+        <tr><td>Windows Server</td><td>Dominio, autenticación, cuentas y permisos</td></tr>
+        <tr><td>Nextcloud</td><td>Almacenamiento centralizado y copias de seguridad</td></tr>
+        <tr><td>Prometheus</td><td>Recogida de métricas</td></tr>
+        <tr><td>Loki y Grafana</td><td>Consulta de registros y visualización</td></tr>
+        <tr><td>Python y Flask</td><td>Panel web de administración</td></tr>
+        <tr><td>RAID</td><td>Redundancia ante fallos de disco</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Arquitectura de red</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>VLAN</th><th>Uso</th><th>Red</th></tr>
+        <tr><td>10</td><td>Servidores</td><td>192.168.10.0/24</td></tr>
+        <tr><td>20</td><td>Usuarios y clientes</td><td>192.168.20.0/24</td></tr>
+        <tr><td>30</td><td>Gestión</td><td>192.168.30.0/24</td></tr>
+        <tr><td>40</td><td>Invitados</td><td>192.168.40.0/24</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Estado del proyecto</h2>
+    <p>
+      En desarrollo. Actualmente estamos en la fase de preparación del entorno. Toda la
+      documentación, incluido el documento funcional, está en el
+      <a href="https://github.com/IkerNohales/netshield/tree/main/docs">repositorio</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Autores</h2>
+    <div class="grid">
+      <div class="card"><h3>Iker Nohales Jiménez</h3><p>Diseño de red, pfSense, VLANs, firewall, WireGuard y Suricata.</p></div>
+      <div class="card"><h3>Daniel Avilés Fernández</h3><p>Windows Server, Nextcloud, copias de seguridad, Flask y monitorización.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  NetShield · Proyecto de ASIX · Ins Puig Castellar
+</footer>
+
+</body>
+</html>
